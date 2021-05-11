@@ -13,7 +13,8 @@ lightSensor = PiicoDev_VEML6030()
 while True:
     degC = tempSensor.readTempC() # read the temperature sensor [degrees Celsius]    
     lux = lightSensor.read() # read the light sensor [lux]
-
-    print(F'Temperature {degC:.2f} degC   Light: {lux:.0f} Lux')
+    
+    # Display the data (convert numbers to strings using str() so they can appear in the print()
+    print("Temperature " + str(degC) + "     Light: " + str(lux))
 
     sleep(1)
